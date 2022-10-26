@@ -1,18 +1,17 @@
 import java.awt.Graphics;
 
 /**
- * CircleDingus is an example of a very simple Dingus.
- * 
+ * CircleDingus is an example of a very simple Dingus
  * @author Andrei David Nechitoaia
  * @id 180 6130
  */
+
 class CircleDingus extends Dingus {
     protected int radius;
     protected boolean filled; // true: filled, false: outline
 
     /**
      * Create and initialize a new CircleDingus.
-     * 
      * @param maxX upper bound for the x coordinate of the position
      * @param maxY upper bound for the y coordinate of the position
      */
@@ -36,9 +35,7 @@ class CircleDingus extends Dingus {
         SetColor(g);
         if (filled) {
             g.fillArc(x, y, 2 * radius, 2 * radius, 0, 360);
-        } //else {
-          //  g.drawArc(x, y, 2 * radius, 2 * radius, 0, 360);
-        //}
+        } 
     }
 
     //this method calculates the limits an object has regarding collision with the walls 

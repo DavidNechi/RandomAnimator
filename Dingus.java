@@ -1,20 +1,14 @@
 import java.awt.Color;
 import java.awt.Graphics;
-
 import java.util.Random;
 
 /**
  * Dingus represents an arbitraty shape.
- * 
  * @author Andrei David Nechitoaia
  * @id 180 6130
  */
 
 abstract class Dingus {
-    /**
-     * Random generator to be used by all subclasses of Dingus.
-     * DON'T CHANGE
-     */
     Random random = Painting.RANDOM;
 
     /**
@@ -42,10 +36,10 @@ abstract class Dingus {
 
     /**
      * Initialize color and position to random values.
-     *
      * @param maxX upper bound for the x coordinate of the position
      * @param maxY upper bound for the y coordinate of the position
      */
+
     public Dingus(int maxX, int maxY) {
         this.maxX = maxX;
         this.maxY = maxY;
@@ -55,7 +49,6 @@ abstract class Dingus {
 
         //  Initialize to a random color
         //  TODO
-
         int r = random.nextInt(255);
         int g = random.nextInt(255);
         int b = random.nextInt(255);

@@ -1,21 +1,16 @@
 import java.awt.BorderLayout;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
  import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
-
 /**
  * Main class for the homework assignment Random Animator.
- * 
- * 
- * TODO:
- *
  * @author Andrei David Nechitoaia
  * @id 180 6130
  */
-public class RandomAnimator {
+
+ public class RandomAnimator {
     JFrame frame;
     Painting painting; // panel that provides the random painting
     JButton regenerateButton;

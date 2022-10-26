@@ -29,22 +29,18 @@ class RectangleDingus extends Dingus {
         SetColor(g);
         if (filled) {
             g.fillRect(x, y, length, length);
-        }// else {
-           // g.drawRect(x, y, length, length);
-        //}
+        }
     }
 
-     //this method calculates the limits an object has regarding collision with the walls 
+    //this method calculates the limits an object has regarding collision with the walls 
     //ofthe frame
     @Override
     void updatechords(int x, int y){
         this.x = x;
         this.y = y;
-
         this.limitleftx = x;
         this.limitrightx = x + this.length;
         this.limituppery = y;
         this.limitlowery = y + this.length;
     }
-
 }

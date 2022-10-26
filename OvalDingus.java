@@ -2,7 +2,6 @@ import java.awt.Graphics;
 
 /**
  * CircleDingus is an example of a very simple Dingus.
- * 
  * @author Andrei David Nechitoaia
  * @id 180 6130
  */
@@ -13,7 +12,6 @@ class OvalDingus extends Dingus {
 
     /**
      * Create and initialize a new CircleDingus.
-     * 
      * @param maxX upper bound for the x coordinate of the position
      * @param maxY upper bound for the y coordinate of the position
      */
@@ -43,7 +41,7 @@ class OvalDingus extends Dingus {
         // limituppery);
     }
 
-    // //this method calculates the limits an object has regarding collision with the walls 
+    //this method calculates the limits an object has regarding collision with the walls 
     //of the frame
     @Override
     void updatechords(int x, int y) {

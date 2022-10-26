@@ -2,10 +2,8 @@ import java.awt.Graphics;
 
 /**
  * TreeDingus is an example of a slightly more advanced Dingus.
- * 
  * TreeDingus draws a "tree" using a rectangle as the trunk, and circle for a
  * crown.
- * 
  * @author Andrei David Nechitoaia
  * @id 180 6130
  */
@@ -17,10 +15,10 @@ class TreeDingus extends Dingus {
 
     /**
      * Create and initialize a new TreeDingus.
-     * 
      * @param maxX upper bound for the x coordinate of the position
      * @param maxY upper bound for the y coordinate of the position
      */
+
     public TreeDingus(int maxX, int maxY) {
         // initialize Dingus properties
         super(maxX, maxY);
@@ -45,11 +43,8 @@ class TreeDingus extends Dingus {
         if (filled) {
             // more general way to draw an oval than with fillOval (hint :-)
             g.fillArc(x, y, 2 * crownRadius, 2 * crownRadius, 0, 360);
-         } // else {
-        //     g.drawArc(x, y, 2 * crownRadius, 2 * crownRadius, 0, 360);
-        // }
+         } 
 
-        // draw trunk
        SetColor(g);
         int xx = x + crownRadius - trunkWidth / 2;
         int yy = y + 2 * crownRadius;
@@ -61,7 +56,7 @@ class TreeDingus extends Dingus {
         }
     }
 
-     //this method calculates the limits an object has regarding collision with the walls 
+    //this method calculates the limits an object has regarding collision with the walls 
     //ofthe frame
     @Override
     void updatechords(int x, int y){

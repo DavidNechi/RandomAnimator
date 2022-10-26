@@ -6,15 +6,10 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
 import java.util.ArrayList;
-// import java.util.Collection;
 import java.util.Collections;
 import java.util.Random;
-// import java.util.Timer;
-// import java.util.TimerTask;
 import javax.swing.Timer;
-
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -22,33 +17,21 @@ import java.awt.*;
 
 
 public class Painting extends JPanel implements ActionListener {
-
- 
     static final long SEED = 45;
-
-  
     static final Random RANDOM = new Random();
     int numberOfRegenerates = 0;
 
-
     char current = '0';
     String filename = "randomshot_"; 
-
-
     ArrayList<Dingus> shapes = new ArrayList<Dingus>();
-
-
 
     public Painting() {
         setPreferredSize(new Dimension(800, 450)); // make panel 800 by 450 pixels.
-        // ...
     }
 
     @Override
     protected void paintComponent(Graphics g) { // draw all your shapes
-        super.paintComponent(g); // clears the panel
-        // draw all shapes
-        // TODO
+        super.paintComponent(g); 
         for (int i = 0; i < shapes.size(); i++) {
             shapes.get(i).draw(g);
         }
@@ -77,6 +60,7 @@ public class Painting extends JPanel implements ActionListener {
     /**
      * Reaction to button press.
      */
+    
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -166,26 +150,26 @@ public class Painting extends JPanel implements ActionListener {
         }
     }
 
-//     void saveScreenshot(Component component, String name) {
-//         // minus 1 because the initial picture should not count
-//         String randomInfo = "" + SEED + "+" + (numberOfRegenerates - 1);
-//         System.out.println(SwingUtilities.isEventDispatchThread());
-//         BufferedImage image = new BufferedImage(
-//                 component.getWidth(),
-//                 component.getHeight(),
-//                 BufferedImage.TYPE_INT_RGB);
+    void saveScreenshot(Component component, String name) {
+        // minus 1 because the initial picture should not count
+        String randomInfo = "" + SEED + "+" + (numberOfRegenerates - 1);
+        System.out.println(SwingUtilities.isEventDispatchThread());
+        BufferedImage image = new BufferedImage(
+                component.getWidth(),
+                component.getHeight(),
+                BufferedImage.TYPE_INT_RGB);
 
-//         // call the Component's paint method, using
-//         // the Graphics object of the image.
-//         Graphics graphics = image.getGraphics();
-//         component.paint(graphics); // alternately use .printAll(..)
-//         graphics.drawString(randomInfo, 0, component.getHeight());
+        // call the Component's paint method, using
+        // the Graphics object of the image.
+        Graphics graphics = image.getGraphics();
+        component.paint(graphics); // alternately use .printAll(..)
+        graphics.drawString(randomInfo, 0, component.getHeight());
 
-//         try {
-//             ImageIO.write(image, "PNG", new File(name + ".png"));
-//             System.out.println("Saved screenshot as " + name);
-//         } catch (IOException e) {
-//             System.out.println("Saving screenshot failed: " + e);
-//         }
-//     }
-// }
+        try {
+            ImageIO.write(image, "PNG", new File(name + ".png"));
+            System.out.println("Saved screenshot as " + name);
+        } catch (IOException e) {
+            System.out.println("Saving screenshot failed: " + e);
+        }
+    }
+}
